@@ -4,7 +4,6 @@ import {Button} from 'react-native-elements';
 import UsersContext from '../context/UserContext';
 
 
-
 export default ({route, navigation}) => {
     function checkCEP(cep) {
         fetch(`https://viacep.com.br/ws/${cep}/json/`).then(response => response.json())
@@ -17,7 +16,6 @@ export default ({route, navigation}) => {
     const {dispatch} = useContext(UsersContext);
     const [cep, setCep] = useState();
     const [logradouro, setLogradouro] = useState();
-
 
 
     return (
@@ -80,7 +78,7 @@ export default ({route, navigation}) => {
                     style={style.input}
                     onChangeText={logradouro => setUser({...user, logradouro})}
                     placeholder="Avenida Campo Bom"
-                    value={user.logradouro }
+                    value={user.logradouro}
                 />
 
                 <Text>Complemento:</Text>
