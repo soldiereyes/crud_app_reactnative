@@ -2,8 +2,8 @@ import React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import UserList from './src/views/UserList';
-import UserForm from './src/views/UserForm';
+import UserList from './src/views/List/UserList';
+import UserForm from './src/views/Form/UserForm';
 import {Button, Icon} from 'react-native-elements';
 import {UsersProvider} from './src/context/UserContext';
 

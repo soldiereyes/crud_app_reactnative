@@ -4,7 +4,7 @@ import React, {useContext} from 'react';
 import {Alert, FlatList} from 'react-native'
 import {ListItem, Avatar, Button, Icon} from 'react-native-elements';
 
-import UsersContext from '../context/UserContext'
+import UsersContext from '../../context/UserContext'
 
 export default props => {
 

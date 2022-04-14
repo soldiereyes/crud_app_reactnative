@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
-import {Text, TextInput, StyleSheet, ScrollView} from 'react-native'
-import {Button} from 'react-native-elements';
-import UsersContext from '../context/UserContext';
+import {Text} from 'react-native'
+import UsersContext from '../../context/UserContext';
+import {Input, ScrollView, Button} from "./styles";
 
 
 export default ({route, navigation}) => {
@@ -20,19 +20,17 @@ export default ({route, navigation}) => {
 
     return (
         <>
-            <ScrollView style={style.form}>
+            <ScrollView>
                 <Text>Nome:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={name => setUser({...user, name})}
                     placeholder="Informe o nome"
                     value={user.name}
                 />
                 <Text>Idade:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={age => setUser({...user, age})}
                     placeholder="Informe a idade"
                     value={user.age}
@@ -40,8 +38,7 @@ export default ({route, navigation}) => {
 
                 <Text>E-mail:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={email => setUser({...user, email})}
                     placeholder="Informe o e-mail"
                     value={user.email}
@@ -49,8 +46,7 @@ export default ({route, navigation}) => {
 
                 <Text>CPF:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={cpf => setUser({...user, cpf})}
                     placeholder="Informe o CPF "
                     value={user.cpf}
@@ -58,8 +54,7 @@ export default ({route, navigation}) => {
 
                 <Text>Avatar:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={avatar => setUser({...user, avatar})}
                     placeholder="Informe o link para o avatar"
                     value={user.avatarUrl}
@@ -67,15 +62,14 @@ export default ({route, navigation}) => {
 
                 <Text>Cep:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={texto => setCep(texto)}
                     onBlur={() => checkCEP(cep)} title="Buscar"
                     placeholder="000000-00"
                 />
                 <Text>Logradouro:</Text>
-                <TextInput
-                    style={style.input}
+
+                <Input
                     onChangeText={logradouro => setUser({...user, logradouro})}
                     placeholder="Avenida Campo Bom"
                     value={user.logradouro}
@@ -83,8 +77,7 @@ export default ({route, navigation}) => {
 
                 <Text>Complemento:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={complemento => setUser({...user, complemento})}
                     placeholder="Lado par"
                     value={user.complemento}
@@ -92,8 +85,7 @@ export default ({route, navigation}) => {
 
                 <Text>Bairro:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={bairro => setUser({...user, bairro})}
                     placeholder="Bairro: Vila Prudente"
                     value={user.bairro}
@@ -101,8 +93,7 @@ export default ({route, navigation}) => {
 
                 <Text>Localidade:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={localidade => setUser({...user, localidade})}
                     placeholder="Localidade: São Paulo"
                     value={user.localidade}
@@ -110,13 +101,12 @@ export default ({route, navigation}) => {
 
                 <Text>UF:</Text>
 
-                <TextInput
-                    style={style.input}
+                <Input
                     onChangeText={uf => setUser({...user, uf})}
                     placeholder="UF:SP"
                     value={user.uf}
                 />
-
+// implementação da estilização do Botão
                 <Button title="Salvar"
                         onPress={() => {
                             dispatch({
@@ -130,21 +120,3 @@ export default ({route, navigation}) => {
     )
 };
 
-
-const style = StyleSheet.create({
-    buttonSearch: {
-        color: 'white',
-    },
-    form: {
-        padding: 12,
-
-    },
-    input: {
-        height: 50,
-        borderColor: 'gray',
-        borderWidth: 1,
-        margin: 10,
-        marginBottom: 10,
-        padding: 10
-    }
-});
