@@ -37,7 +37,7 @@ Pessoas - Formulário
 
 <h2>Como executar?</h2> 
 
-  Importe o projeto na sua IDE e coloque todas as depencências no package.json depois é só dar o comando - "expo install". 
+  Importe o projeto na sua IDE e coloque todas as depencências no package.json depois é só dar o comando - "expo install" entro da pasta crudapp.  
   Pronto, já estamos dentro do projeto e com todas as dependências instaladas. Agora é abrir o terminal e rodar o comando
   "expo start". 
   
