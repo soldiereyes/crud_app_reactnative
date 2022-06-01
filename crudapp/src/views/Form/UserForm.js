@@ -106,7 +106,6 @@ export default ({route, navigation}) => {
                     placeholder="UF:SP"
                     value={user.uf}
                 />
-// implementação da estilização do Botão
                 <Button title="Salvar"
                         onPress={() => {
                             dispatch({

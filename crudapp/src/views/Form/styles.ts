@@ -15,6 +15,6 @@ export const Text = styled.Text`
 `
 export const Button = styled.Button`
   border-radius: 20px;
-  background-size: 40px;
+  
     
 `
