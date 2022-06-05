@@ -1,9 +1,6 @@
 import React, {useContext} from 'react';
-
-
 import {Alert, FlatList} from 'react-native'
 import {ListItem, Avatar, Button, Icon} from 'react-native-elements';
-
 import UsersContext from '../../context/UserContext'
 
 export default props => {
@@ -12,19 +9,9 @@ export default props => {
 
     function confirmDeletion(user) {
         Alert.alert('Excluir associado', `Deseja excluir ${user.name}?`, [
-            {
-                text: 'Sim',
-                onPress() {
-                    dispatch({
-                        type: 'deleteUser',
-                        payload: user
-                    })
-                }
-            },
-            {
-                text: 'Não'
-            }
-        ])
+            {text: 'Sim', onPress() { dispatch({type: 'deleteUser', payload: user})}},
+            {text: 'Não'}
+            ])
     }
 
     function getUserItem({item: user}) {
