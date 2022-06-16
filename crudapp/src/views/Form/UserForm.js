@@ -13,9 +13,11 @@ export default ({route, navigation}) => {
     }
 
     const [user, setUser] = useState(route.params ? route.params : {});
-    const {dispatch} = useContext(UsersContext);
     const [cep, setCep] = useState();
-    const [logradouro, setLogradouro] = useState();
+    const [setLogradouro] = useState();
+
+
+    const {dispatch} = useContext(UsersContext);
 
 
     return (

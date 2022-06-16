@@ -11,8 +11,6 @@ export const Input = styled.TextInput`
 export const ScrollView = styled.ScrollView`
   padding: 20px;
 `
-export const Text = styled.Text`
-`
 export const Button = styled.Button`
   border-radius: 20px;
   

@@ -2,7 +2,7 @@ import React, {createContext, useReducer} from 'react';
 import users from '../data/users';
 
 const initialState = {users}
-const UsersContext = createContext({})  // criação de um contexto
+const UsersContext = createContext({})
 
 const actions = {
     createUser(state, action) {
@@ -31,13 +31,13 @@ const actions = {
 export const UsersProvider = props => {
 
     function reducer(state, action) {
-        const fn = actions[action.type]
-        return fn ? fn(state, action) : state
+        const fn = actions[action.type];
+        return fn ? fn(state, action) : state;
     }
 
     const [state, dispatch] = useReducer(reducer, initialState)
     return (
-        <UsersContext.Provider // dentro do context criei  um Provider dentro será renderizado tudo que eu passar em props.children
+        <UsersContext.Provider
             value={{
                 state, dispatch
             }}>

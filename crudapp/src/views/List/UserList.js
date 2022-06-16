@@ -8,9 +8,13 @@ export default props => {
     const {state, dispatch} = useContext(UsersContext)
 
     function confirmDeletion(user) {
-        Alert.alert('Excluir associado', `Deseja excluir ${user.name}?`, [
-            {text: 'Sim', onPress() { dispatch({type: 'deleteUser', payload: user})}},
-            {text: 'Não'}
+        Alert.alert(
+            'Excluir associado', `Deseja excluir ${user.name}?`,
+
+            [
+                {text: 'Sim', onPress() { dispatch({type: 'deleteUser', payload: user})}},
+
+                {text: 'Não'}
             ])
     }
 
