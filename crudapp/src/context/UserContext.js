@@ -46,5 +46,3 @@ export const UsersProvider = props => {
     )
 }
 export default UsersContext
-
-// o provider passa as informações dentro da arvore de componentes.
