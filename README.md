@@ -1,45 +1,54 @@
-# ePrecise
+# CRUD App React Native
 
-<h1>Introdução e Requisitos</h1>
+Bem-vindo ao repositório do CRUD App React Native! Este projeto é um aplicativo de demonstração que permite criar, ler, atualizar e excluir registros de uma lista.
 
-App de gestão de pessoas com listagem e cadastro de pessoas. Ao inserir o endereço da pessoa, 
-os detalhes do endereço devem ser buscados através de uma API publica gratuíta através do CEP.
+## Visão Geral
 
-Pessoas - Listagem.
-    Dados: Nome, idade, cpf
-    Ações: 1.Abrir detalhes: ao clicar em registro, deve abrir os detalhes da pessoa para edição
+O CRUD App React Native é um aplicativo simples que demonstra a implementação das operações básicas de um CRUD (Create, Read, Update, Delete) em um ambiente React Native. Ele utiliza uma lista de itens como exemplo e fornece uma interface intuitiva para adicionar, visualizar, editar e excluir registros.
 
+## Funcionalidades
 
-Pessoas - Formulário
-    Dados: Nome, idade, cpf, rg, endereço (rua, número, bairro, cidade, estado, cep)
-    Ações: Inserir e Remover
-    
-<h2>Dependencias</h2>
+- Adicionar um novo item à lista.
+- Visualizar uma lista de todos os itens existentes.
+- Editar informações de um item existente.
+- Excluir um item da lista.
 
- <br> "@react-native-community/masked-view": "0.1.10",</br>
-   <br>  "@react-navigation/native": "^5.8.10",</br>
-   <br>  "@react-navigation/stack": "^5.12.8",</br>
-    <br> "expo": "^44.0.6",</br>
-    <br> "expo-status-bar": "~1.2.0",</br>
-    <br> "react": "17.0.1",</br>
-   <br>  "react-dom": "17.0.1",</br>
-    <br> "react-hook-form": "^7.29.0",</br>
-   <br>  "react-native": "0.64.3",</br>
-   <br>  "react-native-elements": "^3.0.1",</br>
-    <br> "react-native-gesture-handler": "~2.1.0",</br>
-   <br>  "react-native-reanimated": "~2.3.1",</br>
-    <br> "react-native-safe-area-context": "3.3.2",</br>
-   <br>  "react-native-screens": "~3.10.1",</br>
-   <br>  "react-native-vector-icons": "^7.1.0",</br>
-   <br>  "react-native-web": "0.17.1",</br>
-   <br>  "rxjs": "^7.5.5",</br>
-   <br>  "rxjs-compat": "^6.6.7"</br>
+## Tecnologias Utilizadas
 
-<h2>Como executar?</h2> 
+O projeto utiliza as seguintes tecnologias e ferramentas:
 
-  Importe o projeto na sua IDE e coloque todas as depencências no package.json depois é só dar o comando - "expo install" entro da pasta crudapp no terminal.  
-  Pronto, já estamos dentro do projeto e com todas as dependências instaladas. Agora é só dar um "expo start". 
-  
-  <h2>Wireframe</h2>
-  https://www.figma.com/file/jYFSEvTVN5w6hVXCUa2u4l/ePrecise?node-id=0%3A1
+- React Native: Framework JavaScript para desenvolvimento de aplicativos móveis multiplataforma.
+- TypeScript: Linguagem de programação que adiciona tipagem estática ao JavaScript, fornecendo maior segurança e produtividade ao desenvolvimento.
+- Expo: Plataforma que facilita o desenvolvimento e teste de aplicativos React Native.
+- React Navigation: Biblioteca de roteamento e navegação para aplicativos React Native.
+- Outras dependências específicas podem ser encontradas no arquivo `package.json`.
 
+## Estrutura do Projeto
+
+A estrutura do projeto segue uma abordagem típica para aplicativos React Native:
+
+- `src/`: Contém o código fonte do aplicativo.
+  - `components/`: Contém os componentes reutilizáveis utilizados no aplicativo.
+  - `screens/`: Contém as telas do aplicativo, onde cada tela é um componente React Native.
+  - `navigation/`: Contém as configurações e rotas de navegação do aplicativo.
+  - `services/`: Contém módulos para integrações com serviços externos, como uma API de backend.
+  - `utils/`: Contém utilitários e funções auxiliares.
+  - `App.tsx`: O ponto de entrada principal do aplicativo React Native.
+- `assets/`: Contém os recursos estáticos do aplicativo, como imagens e ícones.
+- `App.tsx`: O arquivo principal de inicialização do aplicativo.
+- `package.json`: O arquivo de configuração do gerenciador de pacotes npm, contendo as dependências e scripts do projeto.
+
+## Como Executar o Projeto Localmente
+
+Antes de começar, certifique-se de ter o Node.js, o npm e o Expo CLI instalados em sua máquina.
+
+1. Clone este repositório em sua máquina local.
+2. Abra o terminal na pasta raiz do projeto.
+3. Execute o comando `npm install` para instalar as dependências do projeto.
+4. Execute o comando `expo start` para iniciar o servidor de desenvolvimento do Expo.
+5. Use um emulador iOS/Android ou o aplicativo Expo no seu dispositivo físico para visualizar o aplicativo.
+6. Siga as instruções exibidas no terminal para abrir o aplicativo no emulador ou digitalizar o código QR com o aplicativo Expo.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, fique à vontade para abrir uma issue ou enviar um
